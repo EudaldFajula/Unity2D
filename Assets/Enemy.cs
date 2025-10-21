@@ -1,10 +1,11 @@
 using UnityEngine;
+[RequireComponent(typeof(MoveBehaviour))]
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float rayDistance;
     [SerializeField] private LayerMask obstacleLayer;
-    private Transform rayOrigin;
+    public Transform rayOrigin;
 
     private MoveBehaviour _mb;
     private bool movingRight = true;
